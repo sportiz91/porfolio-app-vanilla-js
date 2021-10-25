@@ -1,0 +1,3 @@
+# Portfolio App (Vanilla JS)
+
+This is my first App built with SCSS. The goal of this web is practicing my SCSS skills! Complete...
