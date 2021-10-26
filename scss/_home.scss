@@ -1,0 +1,60 @@
+/* STYLE --------------------------------------------------------------------------------------------------------------- */
+.home {
+  padding-top: 40vh;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  grid-template-columns: 100%;
+  align-items: flex-end;
+  justify-content: center;
+  background: linear-gradient(
+      to right,
+      rgba(39, 39, 39, 0.9),
+      rgba(39, 39, 39, 0.3)
+    ),
+    url("../images/model-1.jpg") center top;
+  background-size: cover;
+
+  .name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__mike {
+      padding-bottom: 1rem;
+      border-bottom: 2px solid white;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+
+    &__profession {
+      padding: 0 0.5rem;
+    }
+  }
+
+  .end-wrapper {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    &__social-icons {
+      margin-bottom: 1rem;
+
+      & > a {
+        @include transition-ease;
+      }
+
+      & > a:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+/* LEARNINGS --------------------------------------------------------------------------------------------------------------- */
+/* 2x1 matrix with the first row fit content: if you want to make a 2x1 matrix, where the first row fit the content, you should specify grid-template-rows: min-content 1fr.
+With flex, you would define more lines of code: you should make the home wrapper display flex, flex direction column, center the elements (justify content +
+align items). On the name row you should not specify any height, because it will fit content, bt on the end-wrapper you need to specify the height 100% in order
+to get the remaining content. */
+
+/* 2. ONE FOLDER UP: If you determine ../ you go one folder up. */

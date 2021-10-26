@@ -1,0 +1,50 @@
+/* PARTIALS --------------------------------------------------------------------------------------------------------------- */
+@import "_config";
+@import "_home";
+@import "_menu";
+
+/* STYLE --------------------------------------------------------------------------------------------------------------- */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: $bg-color;
+  color: set-text-color($bg-color);
+  height: 100vh;
+  line-height: 1;
+}
+
+header {
+  position: fixed;
+  height: 10vh;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h1,
+h2 {
+  font-weight: 400;
+}
+
+span {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: set-text-color($bg-color);
+}
+
+.social-icons {
+  &--emoji {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+  }
+}
+
+.secondary-text {
+  color: $secondary-color;
+}
+
+/* LEARNINGS --------------------------------------------------------------------------------------------------------------- */
+/* 1. LINE HEIGHT: By default, h1, h2, spans, etc, have some margin or padding implicit. You can define a line-height to the body for overriding this. */

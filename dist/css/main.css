@@ -1,0 +1,283 @@
+/* PARTIALS --------------------------------------------------------------------------------------------------------------- */
+/* VARIABLES --------------------------------------------------------------------------------------------------------------- */
+/* RESET --------------------------------------------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* FUNCTIONS --------------------------------------------------------------------------------------------------------------- */
+/* MIXINS --------------------------------------------------------------------------------------------------------------- */
+/* BREAKPOINT MIXINS --------------------------------------------------------------------------------------------------------------- */
+/* STYLE --------------------------------------------------------------------------------------------------------------- */
+.home {
+  padding-top: 40vh;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content 1fr;
+      grid-template-rows: -webkit-min-content 1fr;
+      grid-template-rows: min-content 1fr;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../images/model-1.jpg") center top;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../images/model-1.jpg") center top;
+  background-size: cover;
+}
+
+.home .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.home .name__mike {
+  padding-bottom: 1rem;
+  border-bottom: 2px solid white;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.home .name__profession {
+  padding: 0 0.5rem;
+}
+
+.home .end-wrapper {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.home .end-wrapper__social-icons {
+  margin-bottom: 1rem;
+}
+
+.home .end-wrapper__social-icons > a {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.home .end-wrapper__social-icons > a:hover {
+  color: #ff652f;
+}
+
+/* LEARNINGS --------------------------------------------------------------------------------------------------------------- */
+/* 2x1 matrix with the first row fit content: if you want to make a 2x1 matrix, where the first row fit the content, you should specify grid-template-rows: min-content 1fr.
+With flex, you would define more lines of code: you should make the home wrapper display flex, flex direction column, center the elements (justify content +
+align items). On the name row you should not specify any height, because it will fit content, bt on the end-wrapper you need to specify the height 100% in order
+to get the remaining content. */
+/* 2. ONE FOLDER UP: If you determine ../ you go one folder up. */
+/* STYLE --------------------------------------------------------------------------------------------------------------- */
+.menu-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  height: 28px;
+  width: 28px;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn-burger {
+  position: absolute;
+  top: 11px;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn-burger.open {
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+  background-color: transparent;
+}
+
+.menu-btn-burger.open::before {
+  -webkit-transform: rotate(45deg) translate(7px, 7px);
+          transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-btn-burger.open::after {
+  -webkit-transform: rotate(-45deg) translate(4px, -5px);
+          transform: rotate(-45deg) translate(4px, -5px);
+  width: 100%;
+}
+
+.menu-btn-burger::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn-burger::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  height: 3px;
+  width: 70%;
+  background-color: #fff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav.open {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  opacity: 1;
+}
+
+.nav-items-list {
+  height: 100vh;
+  background-color: #272727;
+  opacity: 0.98;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.nav-item {
+  width: 100vw;
+  padding: 2rem 0;
+  font-size: 2rem;
+  font-weight: 100;
+  list-style-type: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-item-link {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-item-link:hover {
+  color: #ff652f;
+}
+
+.nav-item-link.active {
+  color: #ff652f;
+}
+
+.nav-item.open {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+.nav-item:nth-child(1) {
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+}
+
+.nav-item:nth-child(2) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.nav-item:nth-child(3) {
+  -webkit-transition-delay: 0.45s;
+          transition-delay: 0.45s;
+}
+
+.nav-item:nth-child(4) {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+/* LEARNINGS --------------------------------------------------------------------------------------------------------------- */
+/* 1. TWO CLASSES + BEFORE/AFTER: If you want to tap into a before or after class, when an html element has two classes, you have to do .class1.class2::before
+So, in SCSS, our example is: .menu-btn-brg.open::before */
+/* 2. FOR LOOP GOES FOR THE SAME HTML ELEMENT: if you want to add the transition delay to the li, you should target the li, and not the ul (father). It says nth-child
+But it's misleading because it actually points to the same element */
+/* STYLE --------------------------------------------------------------------------------------------------------------- */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #272727;
+  color: #fff;
+  height: 100vh;
+  line-height: 1;
+}
+
+header {
+  position: fixed;
+  height: 10vh;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h1,
+h2 {
+  font-weight: 400;
+}
+
+span {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.social-icons--emoji {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
+
+.secondary-text {
+  color: #ff652f;
+}
+
+/* LEARNINGS --------------------------------------------------------------------------------------------------------------- */
+/* 1. LINE HEIGHT: By default, h1, h2, spans, etc, have some margin or padding implicit. You can define a line-height to the body for overriding this. */
+/*# sourceMappingURL=main.css.map */
