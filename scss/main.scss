@@ -3,6 +3,7 @@
 @import "_home";
 @import "_menu";
 @import "_about";
+@import "_projects";
 
 /* STYLE --------------------------------------------------------------------------------------------------------------- */
 body {
@@ -16,6 +17,7 @@ body {
 header {
   position: fixed;
   height: 10vh;
+  z-index: 2;
 }
 
 h1 {
