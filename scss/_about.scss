@@ -1,0 +1,68 @@
+/* STYLE --------------------------------------------------------------------------------------------------------------- */
+.about {
+  min-height: 100vh;
+
+  &__bio {
+    padding: 28vh 2rem 2rem;
+    background: linear-gradient(
+        to right,
+        rgba(39, 39, 39, 0.9),
+        rgba(39, 39, 39, 0.3)
+      ),
+      url("../images/model-1.jpg") center top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  &__jobs {
+    display: grid;
+    padding: 2rem;
+    gap: 2rem;
+
+    &__job {
+      background-color: lighten($color: $bg-color, $amount: 10%);
+      padding: 1rem 0.5rem 0.5rem;
+      border-bottom: 5px solid $secondary-color;
+
+      & > h2 {
+        margin-bottom: 0.5rem;
+      }
+
+      & > h3 {
+        margin-bottom: 0.4rem;
+      }
+
+      & > h6 {
+        margin-bottom: 0.4rem;
+      }
+    }
+  }
+
+  .end-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__social-icons {
+      margin-bottom: 1rem;
+
+      & > a {
+        @include transition-ease;
+      }
+
+      & > a:hover {
+        color: $secondary-color;
+      }
+    }
+
+    & footer {
+      margin-bottom: 1rem;
+    }
+  }
+}

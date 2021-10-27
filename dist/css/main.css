@@ -236,6 +236,91 @@ So, in SCSS, our example is: .menu-btn-brg.open::before */
 /* 2. FOR LOOP GOES FOR THE SAME HTML ELEMENT: if you want to add the transition delay to the li, you should target the li, and not the ul (father). It says nth-child
 But it's misleading because it actually points to the same element */
 /* STYLE --------------------------------------------------------------------------------------------------------------- */
+.about {
+  min-height: 100vh;
+}
+
+.about__bio {
+  padding: 28vh 2rem 2rem;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../images/model-1.jpg") center top;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../images/model-1.jpg") center top;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.about__jobs {
+  display: -ms-grid;
+  display: grid;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.about__jobs__job {
+  background-color: #414141;
+  padding: 1rem 0.5rem 0.5rem;
+  border-bottom: 5px solid #ff652f;
+}
+
+.about__jobs__job > h2 {
+  margin-bottom: 0.5rem;
+}
+
+.about__jobs__job > h3 {
+  margin-bottom: 0.4rem;
+}
+
+.about__jobs__job > h6 {
+  margin-bottom: 0.4rem;
+}
+
+.about .end-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .end-wrapper__social-icons {
+  margin-bottom: 1rem;
+}
+
+.about .end-wrapper__social-icons > a {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.about .end-wrapper__social-icons > a:hover {
+  color: #ff652f;
+}
+
+.about .end-wrapper footer {
+  margin-bottom: 1rem;
+}
+
+/* STYLE --------------------------------------------------------------------------------------------------------------- */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #272727;
