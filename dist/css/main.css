@@ -346,8 +346,8 @@ But it's misleading because it actually points to the same element */
   padding: 2.5rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (8rem)[6];
-      grid-template-rows: repeat(6, 8rem);
+  -ms-grid-rows: (auto)[6];
+      grid-template-rows: repeat(6, auto);
   gap: 3rem;
 }
 
@@ -504,6 +504,192 @@ That's because each individual project is on the main section, while the nav is 
   color: #ff652f;
 }
 
+/* STYLE --------------------------------------------------------------------------------------------------------------- */
+@media (min-width: 320px) {
+  .projects__wrapper {
+    padding: 4rem;
+  }
+  .projects__wrapper__project__buttons {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (min-width: 420px) {
+  .about .end-wrapper__social-icons {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 0.75rem;
+    left: 1.3rem;
+    bottom: 1rem;
+  }
+  .about footer {
+    position: fixed;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    margin: 0;
+    right: -2rem;
+    bottom: 5rem;
+  }
+  .about__jobs {
+    padding: 4.6rem;
+  }
+  .projects__wrapper {
+    padding: 2rem 7rem;
+  }
+  .projects .end-wrapper__social-icons {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 0.75rem;
+    left: 1.3rem;
+    bottom: 1rem;
+  }
+  .projects footer {
+    position: fixed;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    margin: 0;
+    right: -2rem;
+    bottom: 5rem;
+  }
+  .contact__body > h1 {
+    font-size: 4rem;
+  }
+  .contact__body p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    width: 100%;
+  }
+  header .menu-btn {
+    display: none;
+  }
+  header .nav {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    opacity: 1;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  header .nav-items-list {
+    background-color: transparent;
+    opacity: 1;
+    height: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  header .nav-items-list > li {
+    width: auto;
+    font-size: 1.5rem;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    margin: 1rem;
+    padding: 0;
+  }
+  .about__bio > h2 {
+    font-size: 2rem;
+  }
+  .about__bio > p {
+    font-size: 1.5rem;
+    padding: 0 4rem;
+  }
+  .about__jobs {
+    padding: 4rem 10rem;
+  }
+  .about__jobs__job {
+    max-width: 800px;
+  }
+  .projects__wrapper {
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    -ms-grid-rows: (auto)[3];
+        grid-template-rows: repeat(3, auto);
+  }
+  .projects__title {
+    padding-top: 35vh;
+  }
+}
+
+@media (min-width: 1120px) {
+  .about__bio {
+    padding-top: 35vh;
+    background-size: cover;
+  }
+  .about__jobs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about__jobs__job {
+    width: 100%;
+  }
+  .projects__wrapper {
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+    -ms-grid-rows: (auto)[2];
+        grid-template-rows: repeat(2, auto);
+  }
+  .projects__title {
+    padding-top: 40vh;
+  }
+}
+
+@media (min-width: 1300px) {
+  .projects .wrap {
+    padding: 2rem 7rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .projects__wrapper {
+    padding: 0;
+    -ms-grid-columns: (327px)[3];
+        grid-template-columns: repeat(3, 327px);
+    -ms-grid-rows: (225px)[2];
+        grid-template-rows: repeat(2, 225px);
+  }
+}
+
+/* LEARNINGS --------------------------------------------------------------------------------------------------------------- */
+/* 1. */
 /* STYLE --------------------------------------------------------------------------------------------------------------- */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;

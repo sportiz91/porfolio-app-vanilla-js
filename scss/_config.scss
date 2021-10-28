@@ -26,6 +26,12 @@ $secondary-color: #ff652f;
 }
 
 /* BREAKPOINT MIXINS --------------------------------------------------------------------------------------------------------------- */
+@mixin xml-view {
+  @media (min-width: 320px) {
+    @content;
+  }
+}
+
 @mixin sml-view {
   @media (min-width: 420px) {
     @content;
@@ -33,13 +39,19 @@ $secondary-color: #ff652f;
 }
 
 @mixin md-view {
-  @media (min-width: 751px) {
+  @media (min-width: 768px) {
     @content;
   }
 }
 
 @mixin lg-view {
-  @media (min-width: 1007px) {
+  @media (min-width: 1120px) {
+    @content;
+  }
+}
+
+@mixin xl-view {
+  @media (min-width: 1300px) {
     @content;
   }
 }

@@ -1,0 +1,187 @@
+/* STYLE --------------------------------------------------------------------------------------------------------------- */
+@include xml-view {
+  .projects {
+    &__wrapper {
+      padding: 4rem;
+
+      &__project__buttons {
+        justify-content: space-around;
+      }
+    }
+  }
+}
+
+@include sml-view {
+  .about {
+    .end-wrapper__social-icons {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.75rem;
+      left: 1.3rem;
+      bottom: 1rem;
+    }
+
+    footer {
+      position: fixed;
+      transform: rotate(90deg);
+      margin: 0;
+      right: -2rem;
+      bottom: 5rem;
+    }
+
+    &__jobs {
+      padding: 4.6rem;
+    }
+  }
+
+  .projects {
+    &__wrapper {
+      padding: 2rem 7rem;
+    }
+
+    .end-wrapper__social-icons {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.75rem;
+      left: 1.3rem;
+      bottom: 1rem;
+    }
+
+    footer {
+      position: fixed;
+      transform: rotate(90deg);
+      margin: 0;
+      right: -2rem;
+      bottom: 5rem;
+    }
+  }
+
+  .contact {
+    &__body {
+      & > h1 {
+        font-size: 4rem;
+      }
+
+      & p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@include md-view {
+  header {
+    width: 100%;
+
+    .menu-btn {
+      display: none;
+    }
+
+    .nav {
+      transform: translate(0);
+      opacity: 1;
+      height: 100%;
+      display: flex;
+      justify-content: end;
+
+      &-items-list {
+        background-color: transparent;
+        opacity: 1;
+        height: 100%;
+        flex-direction: row;
+
+        & > li {
+          width: auto;
+          font-size: 1.5rem;
+          transform: translate(0);
+          margin: 1rem;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .about {
+    &__bio {
+      & > h2 {
+        font-size: 2rem;
+      }
+      & > p {
+        font-size: 1.5rem;
+        padding: 0 4rem;
+      }
+    }
+
+    &__jobs {
+      padding: 4rem 10rem;
+
+      &__job {
+        max-width: 800px;
+      }
+    }
+  }
+
+  .projects {
+    &__wrapper {
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(3, auto);
+    }
+
+    &__title {
+      padding-top: 35vh;
+    }
+  }
+}
+
+@include lg-view {
+  .about {
+    &__bio {
+      padding-top: 35vh;
+      background-size: cover;
+    }
+
+    &__jobs {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &__job {
+        width: 100%;
+      }
+    }
+  }
+
+  .projects {
+    &__wrapper {
+      grid-template-columns: repeat(3, auto);
+      grid-template-rows: repeat(2, auto);
+    }
+
+    &__title {
+      padding-top: 40vh;
+    }
+  }
+}
+
+@include xl-view {
+  .projects {
+    .wrap {
+      padding: 2rem 7rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__wrapper {
+      padding: 0;
+      grid-template-columns: repeat(3, 327px);
+      grid-template-rows: repeat(2, 225px);
+    }
+  }
+}
+
+/* LEARNINGS --------------------------------------------------------------------------------------------------------------- */
+/* 1. */
